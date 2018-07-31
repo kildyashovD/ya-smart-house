@@ -1,0 +1,1 @@
+# ya-smart-house
