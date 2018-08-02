@@ -9,6 +9,188 @@
 </head>
 
 <body>
+
+  <header class="page-header">
+    <a class="page-header__logo logo" href="#">
+      <img class="logo__img" src="img/logo.svg" alt="#">
+    </a>
+    <button class="page-header__menu-toggle" type="button">Открыть меню</button>
+    <nav class="page-header__main-nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Сводка</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Устройства</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Сценарии</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <section class="page-preview">
+      <div class="page-preview__wrapper">
+        <p class="page-preview__welcome">Привет, Геннадий!</p>
+        <p class="page-preview__status">Двери и окна закрыты, сигнализация включена.</p>
+
+        <dl class="page-preview__temperature temperature">
+          <div class="temperature__container">
+            <dt class="temperature__house">Дома</dt>
+            <dd class="temperature__house-value">+23</dd>
+          </div>
+          <div class="temperature__container">
+            <dt class="temperature__out">За окном</dt>
+            <dd class="temperature__out-value">+19
+              <span class="temperature__icon">
+                <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="v1-2-1-home-dashboard" transform="translate(-212.000000, -365.000000)">
+                            <rect fill="#F8F8F8" x="0" y="0" width="1366" height="768"></rect>
+                            <g id="status" transform="translate(39.000000, 195.000000)">
+                                <g id="Group" transform="translate(1.000000, 40.000000)">
+                                    <g id="Group-2" transform="translate(-15.000000, -596.000000)">
+                                        <g id="Group-3-Copy" transform="translate(120.000000, 699.000000)">
+                                            <g id="Group-4" transform="translate(67.000000, 27.000000)">
+                                                <rect id="Rectangle-4" fill-rule="nonzero" x="0" y="0" width="26" height="26"></rect>
+                                                <g id="cloud-drizzle" transform="translate(1.000000, 2.000000)" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                                                    <path d="M14,18 L14,20" id="Shape"></path>
+                                                    <path d="M14,11 L14,13" id="Shape"></path>
+                                                    <path d="M9,20 L9,22" id="Shape"></path>
+                                                    <path d="M9,13 L9,15" id="Shape"></path>
+                                                    <path d="M20,15.58 C22.1666971,14.6310615 23.3719893,12.2936524 22.8885932,9.97818513 C22.4051971,7.66271783 20.3653864,6.00278331 18,6 L16.74,6 C15.8695943,2.62945307 12.9194928,0.208656038 9.44387933,0.0129425627 C5.96826587,-0.182770913 2.76504323,1.89152946 1.52174557,5.14305273 C0.2784479,8.394576 1.28050125,12.0768642 4,14.25" id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+              </span>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="services-list">
+          <div class="services-list__content">
+            <a class="services-list__item service" href="#">
+              <p class="service__name">Philips Cooler</p>
+              <p class="service__status">Начнет охлаждать в 16:30</p>
+            </a>
+            <a class="services-list__item service" href="#">
+              <p class="service__name">Xiaomi Yeelight LED Smart Bulb</p>
+              <p class="service__status">Включится в 17:00</p>
+            </a>
+            <a class="services-list__item service" href="#">
+              <p class="service__name">LIFX Mini Day & Dusk A60 E27</p>
+              <p class="service__status">Включится в 17:00</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-list">
+      <div class="services-list__wrapper">
+        <h2 class="services-list__heading">Избранные сценарии</h2>
+        <button class="services-list__previous" type="button" name="button">Назад</button>
+        <button class="services-list__next" type="button" name="button">Вперед</button>
+        <div class="services-list__content">
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Выключить весь свет в доме и во дворе</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Я ухожу</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Включить свет в&nbsp;коридоре</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Набрать горячую ванну</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Сделать пол тёплым во всей квартире</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-list">
+      <div class="services-list__wrapper">
+        <h2 class="services-list__heading">Избранные устройства</h2>
+        <button class="services-list__previous" type="button" name="button">Назад</button>
+        <button class="services-list__next" type="button" name="button">Вперед</button>
+        <ul class="services-list__filter filter">
+          <li class="filter__item"><a class="filter__link" href="#">Все</a></li>
+          <li class="filter__item"><a class="filter__link" href="#">Кухня</a></li>
+          <li class="filter__item"><a class="filter__link" href="#">Зал</a></li>
+          <li class="filter__item"><a class="filter__link" href="#">Лампочки</a></li>
+          <li class="filter__item"><a class="filter__link" href="#">Камеры</a></li>
+        </ul>
+
+        <div class="services-list__content">
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Xiaomi Yeelight LED Smart Bulb</p>
+            <p class="service__status">Включено</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">D-Link Omna 180 Cam</p>
+            <p class="service__status">Включится в 17:00</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Elgato Eve Degree Connected</p>
+            <p class="service__status">Выключено до 17:00</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">LIFX Mini Day & Dusk A60 E27</p>
+            <p class="service__status">Включится в 17:00</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Xiaomi Mi Air Purifier 2S</p>
+            <p class="service__status">Включено</p>
+          </a>
+          <a class="services-list__item service" href="#">
+            <p class="service__name">Philips Zhirui</p>
+            <p class="service__status">Выключено</p>
+          </a>
+        </div>
+
+        <form class="settings-form">
+          <div class="service">
+            <p class="service__name">Xiaomi Yeelight LED Smart Bulb</p>
+            <p class="service__status">Включится в 17:00</p>
+          </div>
+          <div class="settings-form__params">
+            <input class="settings-form__param-item" type="radio" name="param" id="handle" checked>
+            <label for="handle">Вручную</label>
+            <input class="settings-form__param-item" type="radio" name="param" id="light-day">
+            <label for="light-day">Дневной свет</label>
+            <input class="settings-form__param-item" type="radio" name="param" id="night-day">
+            <label for="night-day">Вечерний свет</label>
+          </div>
+          <div class="settings-form__container">
+            <input class="settings-form__slider" type="range" min="0" max="100" value="90" step="2">
+          </div>
+          <button class="settings-form__submit" type="submit">Применить</button>
+          <button class="settings-form__cancel" type="button">Закрыть</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <ul class="page-footer__nav footer-nav">
+        <li class="footer-nav__item"><a class="footer-nav__link" href="#">Помощь</a></li>
+        <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+        <li class="footer-nav__item"><a class="footer-nav__link" href="#">Разработчикам</a></li>
+        <li class="footer-nav__item"><a class="footer-nav__link" href="#">Условия использования</a></li>
+      </ul>
+      <p class="page-footer__copyright copyright">© 2001–2017  ООО «Яндекс»</p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
