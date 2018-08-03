@@ -1,0 +1,42 @@
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px 13px 20px;
+}
+
+.page-header__menu-open {
+  box-sizing: border-box;
+
+  position: relative;
+  padding: 0;
+  width: 41px;
+  height: 38px;
+
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 2px;
+
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+
+    transform: none;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
