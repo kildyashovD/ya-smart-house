@@ -8,23 +8,31 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="main-page">
 
   <header class="page-header">
-    <a class="page-header__logo logo" href="#">
-      <img class="logo__img" src="img/logo.svg" alt="#">
-    </a>
-    <button class="page-header__menu-toggle" type="button">Открыть меню</button>
-    <nav class="page-header__main-nav main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Сводка</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Устройства</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Сценарии</a></li>
-      </ul>
-    </nav>
+    <div class="page-header__wrapper page-header__wrapper--menu-open">
+      <a class="page-header__logo logo" href="#">
+        <img class="logo__img" src="img/logo.svg" alt="#">
+      </a>
+      <button class="page-header__menu-open"></button>
+      <nav class="page-header__main-nav main-nav main-nav--closed-js">
+        <div class="user-data">
+          <img class="user-data__avatar" src="https://yapic.yandex.ru/get/345172939/islands-retina-middle" width="60" height="60" alt="Avatar">
+          <p class="user-data__name">Геннадий Йоу</p>
+        </div>
+        <button class="main-nav__close" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Сводка</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Устройства</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Сценарии</a></li>
+        </ul>
+        <a class="main-nav__auth-out" href="#">Выйти</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="main-content">
+  <main class="page-main">
 
     <section class="page-preview">
       <div class="page-preview__wrapper">
@@ -43,7 +51,7 @@
                 <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="v1-2-1-home-dashboard" transform="translate(-212.000000, -365.000000)">
-                            <rect fill="#F8F8F8" x="0" y="0" width="1366" height="768"></rect>
+                            <rect x="0" y="0" width="1366" height="768"></rect>
                             <g id="status" transform="translate(39.000000, 195.000000)">
                                 <g id="Group" transform="translate(1.000000, 40.000000)">
                                     <g id="Group-2" transform="translate(-15.000000, -596.000000)">
@@ -70,7 +78,7 @@
           </div>
         </dl>
 
-        <div class="services-list">
+        <div class="services-list services-list--margin-b-null">
           <div class="services-list__content">
             <a class="services-list__item service" href="#">
               <p class="service__name">Philips Cooler</p>
@@ -92,8 +100,8 @@
     <section class="services-list">
       <div class="services-list__wrapper">
         <h2 class="services-list__heading">Избранные сценарии</h2>
-        <button class="services-list__previous" type="button" name="button">Назад</button>
-        <button class="services-list__next" type="button" name="button">Вперед</button>
+        <button class="services-list__previous services-list__previous--hidden" type="button" name="button">Назад</button>
+        <button class="services-list__next services-list__next--hidden" type="button" name="button">Вперед</button>
         <div class="services-list__content">
           <a class="services-list__item service" href="#">
             <p class="service__name">Выключить весь свет в доме и во дворе</p>
@@ -117,14 +125,14 @@
     <section class="services-list">
       <div class="services-list__wrapper">
         <h2 class="services-list__heading">Избранные устройства</h2>
-        <button class="services-list__previous" type="button" name="button">Назад</button>
-        <button class="services-list__next" type="button" name="button">Вперед</button>
+        <button class="services-list__previous services-list__previous--hidden" type="button" name="button">Назад</button>
+        <button class="services-list__next services-list__next--hidden" type="button" name="button">Вперед</button>
         <ul class="services-list__filter filter">
-          <li class="filter__item"><a class="filter__link" href="#">Все</a></li>
-          <li class="filter__item"><a class="filter__link" href="#">Кухня</a></li>
-          <li class="filter__item"><a class="filter__link" href="#">Зал</a></li>
-          <li class="filter__item"><a class="filter__link" href="#">Лампочки</a></li>
-          <li class="filter__item"><a class="filter__link" href="#">Камеры</a></li>
+          <li class="filter__item"><a class="filter__link filter__link--active" href="#">Все</a></li>
+          <li class="filter__item filter__item--hidden-js"><a class="filter__link" href="#">Кухня</a></li>
+          <li class="filter__item filter__item--hidden-js"><a class="filter__link" href="#">Зал</a></li>
+          <li class="filter__item filter__item--hidden-js"><a class="filter__link" href="#">Лампочки</a></li>
+          <li class="filter__item filter__item--hidden-js"><a class="filter__link" href="#">Камеры</a></li>
         </ul>
 
         <div class="services-list__content">
@@ -154,22 +162,26 @@
           </a>
         </div>
 
-        <form class="settings-form">
-          <div class="service">
-            <p class="service__name">Xiaomi Yeelight LED Smart Bulb</p>
-            <p class="service__status">Включится в 17:00</p>
+        <form class="settings-form" style="display:none">
+          <div class="settings-form__wrapper">
+            <div class="service--setting">
+              <p class="service__name service__name--setting">Xiaomi Yeelight LED Smart Bulb</p>
+              <p class="service__status service__status--setting">Включится в 17:00</p>
+            </div>
+            <div class="settings-form__params">
+              <input class="settings-form__param-item settings-form__param-item--handle visually-hidden" type="radio" name="param" id="handle" checked>
+              <label class="settings-form__param-label" for="handle">Вручную</label>
+              <input class="settings-form__param-item settings-form__param-item--light-day visually-hidden" type="radio" name="param" id="light-day">
+              <label class="settings-form__param-label" for="light-day">Дневной&nbspсвет</label>
+              <input class="settings-form__param-item settings-form__param-item--light-night visually-hidden" type="radio" name="param" id="light-night">
+              <label class="settings-form__param-label" for="light-night">Вечерний&nbsp;свет</label>
+            </div>
+            <div class="settings-form__range-filter range-filter">
+              <div class="range-filter__scale"></div>
+              <div class="range-filter__toggle"></div>
+            </div>
           </div>
-          <div class="settings-form__params">
-            <input class="settings-form__param-item" type="radio" name="param" id="handle" checked>
-            <label for="handle">Вручную</label>
-            <input class="settings-form__param-item" type="radio" name="param" id="light-day">
-            <label for="light-day">Дневной свет</label>
-            <input class="settings-form__param-item" type="radio" name="param" id="night-day">
-            <label for="night-day">Вечерний свет</label>
-          </div>
-          <div class="settings-form__container">
-            <input class="settings-form__slider" type="range" min="0" max="100" value="90" step="2">
-          </div>
+
           <button class="settings-form__submit" type="submit">Применить</button>
           <button class="settings-form__cancel" type="button">Закрыть</button>
         </form>
@@ -190,6 +202,8 @@
       <p class="page-footer__copyright copyright">© 2001–2017  ООО «Яндекс»</p>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 
 </body>
 

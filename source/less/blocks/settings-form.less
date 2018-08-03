@@ -1,0 +1,98 @@
+.settings-form {
+  box-sizing: border-box;
+
+  position: fixed;
+  padding: 21px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(51, 51, 51, 0.5);
+
+  z-index: 10;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.settings-form__wrapper {
+  box-sizing: border-box;
+
+  margin-bottom: 15px;
+  padding: 21px 0 21px 21px;
+  min-height: 72%;
+
+  border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.settings-form__params {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.settings-form__param-label {
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+
+  color: rgba(0, 0, 0, 1);
+
+  background-color: rgba(247, 247, 247, 1);
+
+  border-radius: 20px;
+
+  &--active {
+    padding-right: 31px;
+
+    background-color: rgba(255, 217, 62, 1);
+  }
+}
+
+.settings-form__param-item--handle:checked + .settings-form__param-label,
+.settings-form__param-item--light-day:checked + .settings-form__param-label,
+.settings-form__param-item--light-night:checked + .settings-form__param-label {
+  background-color: rgba(255, 217, 62, 1);
+}
+
+.settings-form__submit {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0;
+  width: 100%;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 60px;
+
+  border: none;
+
+  background-color: rgba(255, 217, 62, 1);
+
+  border-radius: 20px;
+}
+
+.settings-form__cancel {
+  display: block;
+  padding: 0;
+  width: 100%;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 60px;
+
+  border: none;
+
+  background-color: rgba(255, 255, 255, 1);
+
+  border-radius: 20px;
+}
