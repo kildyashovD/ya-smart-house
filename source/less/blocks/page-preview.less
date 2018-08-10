@@ -11,6 +11,10 @@
   border-radius: 20px;
 }
 
+.page-preview__heading {
+  display: none;
+}
+
 .page-preview__welcome {
   margin: 0;
   margin-bottom: 5px;
@@ -28,4 +32,43 @@
 
   font-size: 12px;
   line-height: 14px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-preview {
+    box-sizing: border-box;
+    width: 47.3%;
+    padding-right: 11px;
+  }
+
+  .page-preview__welcome {
+    font-size: 27px;
+    line-height: 31px;
+  }
+
+  .page-preview__status {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .page-preview__heading {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .page-preview__wrapper {
+    box-sizing: border-box;
+
+    display: flex;
+    margin: 0;
+    margin-bottom: 31px;
+    max-height: 331px;
+
+    overflow-y: hidden;
+  }
 }
