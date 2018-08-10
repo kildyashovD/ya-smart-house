@@ -37,4 +37,32 @@
 
     background-color: rgba(255, 217, 62, 1);
   }
+
+  &:hover {
+    background-color: rgba(255, 217, 62, 1);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    flex-direction: row;
+    margin-right: 0;
+    margin-top: -10px;
+
+    &--open {
+      .filter__item--hidden-js {
+        display: flex;
+      }
+    }
+  }
+
+  .filter__item {
+    margin-right: 10px;
+  }
+
+  .filter__link {
+    &--active {
+      padding-right: 16px;
+    }
+  }
 }

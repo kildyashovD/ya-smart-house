@@ -9,10 +9,32 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.user-data__avatar {
+  width: 60px;
+  height: 60px;
+}
+
 .user-data__name {
   margin-bottom: 0;
 }
 
 .user-data__name::first-letter {
   color: red;
+}
+
+@media (min-width: @desktop-width) {
+  .user-data {
+    padding: 0;
+
+    border: none;
+  }
+
+  .user-data__name {
+    display: none;
+  }
+
+  .user-data__avatar {
+    width: 42px;
+    height: 42px;
+  }
 }

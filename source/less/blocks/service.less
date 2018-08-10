@@ -1,16 +1,13 @@
 .service {
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-  padding: 0 15px 14px 15px;
+  padding: 0 15px 14px;
   min-width: 200px;
   max-width: 200px;
-  height: 120px;
+  min-height: 120px;
   margin-right: 20px;
-
   border-radius: 20px;
-
   background-color: rgba(247, 247, 247, 1);
 
   &--setting {
@@ -19,14 +16,11 @@
 }
 
 .service__name {
-  margin: 0;
-  margin-top: auto;
-
+  margin: auto 0 0;
   color: rgba(51, 51, 51, 1);
 
   &--setting {
     margin-bottom: 5px;
-
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
@@ -34,9 +28,7 @@
 }
 
 .service__status {
-  margin: 0;
-  margin-top: 3px;
-
+  margin: 3px 0 0;
   color: rgba(133, 133, 133, 1);
   font-size: 12px;
   line-height: 14px;
@@ -46,9 +38,34 @@
   }
 }
 
-.services-list__previous,
-.services-list__next {
+.services-list__next,
+.services-list__previous {
   &--hidden {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .service {
+    min-height: 100px;
+    box-sizing: border-box;
+    max-width: none;
+    width: 31.2%;
+    margin-right: 0;
+    margin-left: 2.1%;
+    margin-bottom: 15px;
+
+    &--height-m {
+      min-height: 120px;
+    }
+  }
+
+  .services-list--margin-l-null .service {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .services-list--margin-b-null .service {
+    margin-left: 0;
   }
 }

@@ -22,6 +22,21 @@
 .temperature__out-value {
   margin: 0;
 
+  font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+}
+
+@media (min-width: @desktop-width) {
+  .temperature__house,
+  .temperature__out {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .temperature__house-value,
+  .temperature__out-value {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
