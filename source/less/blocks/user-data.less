@@ -12,6 +12,8 @@
 .user-data__avatar {
   width: 60px;
   height: 60px;
+
+  cursor: pointer;
 }
 
 .user-data__name {
@@ -24,16 +26,14 @@
 
 @media (min-width: @desktop-width) {
   .user-data {
+    display: flex;
     padding: 0;
 
     border: none;
   }
 
-  .user-data__name {
-    display: none;
-  }
-
   .user-data__avatar {
+    margin-right: 10px;
     width: 42px;
     height: 42px;
   }
