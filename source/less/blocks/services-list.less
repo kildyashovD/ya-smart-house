@@ -11,6 +11,10 @@
   flex-wrap: nowrap;
 
   overflow-x: scroll;
+  margin-top: -5px;
+  margin-left: -5px;
+  padding: 5px 0;
+  padding-left: 5px;
 }
 
 .services-list__content::-webkit-scrollbar {
@@ -40,6 +44,13 @@
   display: none;
 }
 
+.services-list__next,
+.services-list__previous {
+  &--hidden {
+    display: none;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .services-list {
     position: relative;
@@ -59,7 +70,8 @@
     }
 
     &--size-l {
-      width: calc(100% + 40px);
+      width: 100%;
+      padding-left: 40px;
     }
 
     .services-list__previous--hidden,
@@ -99,18 +111,57 @@
 
     border: none;
     background-color: transparent;
+
+    &--double {
+      &::before {
+        box-sizing: border-box;
+
+        content: '';
+
+        display: block;
+
+        position: absolute;
+
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: 3px;
+
+        border-left: 2px solid rgba(51, 51, 51, 1);
+        border-bottom: 2px solid rgba(51, 51, 51, 1);
+
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        box-sizing: border-box;
+
+        content: '';
+
+        display: block;
+
+        position: absolute;
+
+        width: 10px;
+        height: 10px;
+        top: 10px;
+        left: 3px;
+
+        border-left: 2px solid rgba(51, 51, 51, 1);
+        border-bottom: 2px solid rgba(51, 51, 51, 1);
+
+        transform: rotate(135deg);
+      }
+    }
   }
 
-  .services-list__previous--hidden,
-  .services-list__next--hidden {
+  .services-list__previous,
+  .services-list__next {
     box-sizing: border-box;
 
-    display: block;
-
     position: absolute;
-
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     padding: 0;
 
     font-size: 0;
@@ -119,17 +170,53 @@
 
     background-color: transparent;
 
-    border-left: 2px solid rgba(51, 51, 51, 1);
-    border-bottom: 2px solid rgba(51, 51, 51, 1);
+    &::before {
+      box-sizing: border-box;
+
+      content: '';
+
+      display: block;
+
+      position: absolute;
+
+      top: 2px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+
+      border-left: 2px solid rgba(194, 194, 194, 1);
+      border-bottom: 2px solid rgba(194, 194, 194, 1);
+    }
+
+    &--on::before {
+      border-left: 2px solid rgba(51, 51, 51, 1);
+      border-bottom: 2px solid rgba(51, 51, 51, 1);
+    }
   }
 
   .services-list__previous {
     right: 26.8px;
-    transform: rotate(45deg);
+
+    &::before {
+      transform: rotate(45deg);
+    }
   }
 
   .services-list__next {
     right: 0;
-    transform: rotate(225deg);
+
+    &::before {
+      left: 2px;
+
+      transform: rotate(225deg);
+    }
+  }
+
+  .services-list--size-l .services-list__previous {
+    right: 66.8px;
+  }
+
+  .services-list--size-l .services-list__next {
+    right: 40px;
   }
 }

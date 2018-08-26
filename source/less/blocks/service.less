@@ -1,5 +1,7 @@
 .service {
   box-sizing: border-box;
+
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 15px 14px;
@@ -12,6 +14,101 @@
 
   &--setting {
     background-color: transparent;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+  }
+
+  &--light-on {
+    &::before {
+      box-sizing: border-box;
+      content: '';
+
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 14px;
+      left: 14px;
+
+      background-image: url('../img/icon_sun_2@1x.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--light-off {
+    &::before {
+      box-sizing: border-box;
+      content: '';
+
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 14px;
+      left: 14px;
+
+      background-image: url('../img/icon_sun@1x.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--scheduled-off {
+    &::before {
+      box-sizing: border-box;
+      content: '';
+
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 14px;
+      left: 14px;
+
+      background-image: url('../img/icon_scheduled@1x.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--temperature-on {
+    &::before {
+      box-sizing: border-box;
+      content: '';
+
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 14px;
+      left: 14px;
+
+      background-image: url('../img/icon_temperature_2@1x.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--temperature-off {
+    &::before {
+      box-sizing: border-box;
+      content: '';
+
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 14px;
+      left: 14px;
+
+      background-image: url('../img/icon_temperature@1x.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
 
@@ -38,13 +135,6 @@
   }
 }
 
-.services-list__next,
-.services-list__previous {
-  &--hidden {
-    display: none;
-  }
-}
-
 @media (min-width: @desktop-width) {
   .service {
     min-height: 100px;
@@ -58,6 +148,13 @@
     &--height-m {
       min-height: 120px;
     }
+
+    &--setting {
+      display: block;
+      width: auto;
+      min-height: auto;
+      padding: 0;
+    }
   }
 
   .services-list--margin-l-null .service {
@@ -67,5 +164,19 @@
 
   .services-list--margin-b-null .service {
     margin-left: 0;
+  }
+
+  .service__name {
+    &--setting {
+      font-size: 27px;
+      line-height: 31px;
+    }
+  }
+
+  .service__status {
+    &--setting {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }
